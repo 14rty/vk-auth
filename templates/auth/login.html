@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="d-flex h-100">
+    <img style="position:absolute; pointer-events:none; z-index: -1;" class="h-100 w-100" src="/static/vk.png" alt="#0077FF">
+    <form class="container-fluid m-auto bg-white p-5 border rounded-3 round" method="POST" style="max-width: 30rem;">
+        <div class=" border-bottom">
+            <span class="fs-1">Единый вход</span>
+        </div>
+        
+        <div class="form-floating mb-3">
+            <input autocomplete="off" type="text" class="form-control" name="login" id="login" placeholder="login"
+                value="{{ request.form.login }}" required>
+            <label for="login" style="color: rgba(0,0,0,0.5);">Имя пользователя</label>
+        </div>
+    
+        <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+            <label for="password" style="color: rgba(0,0,0,0.5);">Пароль</label>
+        </div>
+    
+        
+        <div class="d-flex justify-content-between">
+            <button type="submit" style="background-color: #0077FF; color: white;" class="btn w-10">Войти</button>
+            <a href="#">Проблемы со входом?</a>
+        </div>
+    </form>
+</div>
+{% endblock %}
